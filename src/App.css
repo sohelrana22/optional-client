@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* my css */
+.text{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.home-body{
+  background-color: #0e3742;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer{
+  position: relative;
+  width: 100%;
+  background-color: #0e3742ec;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .social-icon,
+ footer .menu{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+footer .social-icon li,
+ footer .menu li{
+  list-style: none;
+}
+footer .social-icon li a
+{
+  font-size: 2em;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+footer .social-icon li a:hover{
+  transform: translateY(-10px);
+}
+footer .menu li a{
+  font-size: 1.2em;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0.75;
+}
+footer .menu li a:hover{
+  opacity: 1;
+}
+footer p{
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+.home-container{
+  width: 100%;
+  /* height: 100vh; */
+  
+}
+.home-row{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+.service{
+  text-align: center;
+  padding: 20px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background: transparent;
+  transition: transform 0.5s, background 0.5s;
+}
+.service i{
+  font-size: 70px;
+  margin-bottom: 10px;
+  color: #303ef7;
+}
+.service h2{
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.service:hover{
+  background-color: #303ef7;
+  transform: scale(1.05);
+}
+.service:hover i{
+  color: #fff;
+}
+.text-color{
+  color: #303ef7;
+}
+/* login and register design */
+.form-container{
+  position: relative;
+  width: 350px;
+  padding: 40px 40px 60px;
+  background-color: #131419;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05), 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.form-container h2{
+  color: #c7c7c7;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.form-container .input{
+  text-align: left;
+  margin-top: 40px;
+}
+.form-container .input .inputBox{
+  margin-top: 20px;
+}
+.form-container .input .inputBox label{
+  display: block;
+  color: #868686;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.form-container .input .inputBox input{
+  width: 100%;
+  height: 50px;
+  background-color: #131419;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding: 5px 15px;
+  color: #fff;
+  font-size: 18px;
+  color: #03a9f4;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1),
+              inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+.form-container .input .inputBox input[type='submit'] {
+  margin-top: 20px;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.1),
+               2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+.form-container .input .inputBox input[type='submit']:active{
+  color: #006c9c;
+  margin-top: 20px;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1),
+  inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+.form-container .input .inputBox input::placeholder{
+  color: #555;
+  font-size: 18px;
+}
+.form-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
