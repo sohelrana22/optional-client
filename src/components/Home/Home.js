@@ -31,7 +31,7 @@ That’s why we’re here. With everything your family needs to make those momen
  </p>
              
                 <NavLink
-                  to='/features'
+                  to='/item'
                   className="rounded-pill fs-5 btn btn-primary py-2 ">
                   View Features
                 </NavLink>

@@ -160,3 +160,8 @@ footer p{
   align-items: center;
   min-height: 100vh;
 }
+.home-house{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+}

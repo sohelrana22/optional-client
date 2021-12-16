@@ -10,10 +10,13 @@ import NotFound from './components/NotFound/NotFound';
 import Header from './components/Header/Header';
 import About from './components/About/About';
 import Footer from './components/Footer/Footer';
+import Dashboard from './components/Dashboard/Dashboard';
+import AuthContext from './Context/AuthContext';
+import Details from './components/Details/Details';
 
 function App() {
   return (
-    <div className="App">
+    <AuthContext>
 <BrowserRouter>
 <Header></Header>
         <Routes>
@@ -22,17 +25,16 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/features" element={<Services/>} />
+          <Route path="/item" element={<Services/>} />
           <Route path="/about" element={<About/>} />
-          {/* dashboard route  */}
-        
-          {/* https://www.vrbo.com/ */}
-          {/* dashboard route ends  */}
+          <Route path="/order/:id" element={<Details/>} />
+          <Route path="/dashboard" element={<Dashboard/>} />
+      
           <Route path="*" element={<NotFound/>} />
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
-    </div>
+    </AuthContext>
   );
 }
 
