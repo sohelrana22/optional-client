@@ -13,7 +13,7 @@ const Details = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
       delete data._id;
-        fetch('http://localhost:5000/order', {
+        fetch('https://fathomless-ocean-60780.herokuapp.com/order', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -30,7 +30,7 @@ const Details = () => {
     };
 
     useEffect(() => {
-        fetch('http://localhost:5000/home_item')
+        fetch('https://fathomless-ocean-60780.herokuapp.com/home_item')
             .then(res => res.json())
             .then(data => {
                 const orders = data?.find(order => order?._id === id)

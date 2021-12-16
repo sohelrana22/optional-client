@@ -56,7 +56,7 @@ const useFirebase = () => {
         })
           .then((result) => {
             axios
-              .post("http://localhost:5000/saveusers", {
+              .post("https://fathomless-ocean-60780.herokuapp.com/saveusers", {
                 email,
                 name,
                 role: "user",
@@ -96,7 +96,7 @@ const useFirebase = () => {
     return () => unsubscribe;
   }, [auth]);
   useEffect(() => {
-    fetch(`http://localhost:5000/getadmin/${user.email}`)
+    fetch(`https://fathomless-ocean-60780.herokuapp.com/getadmin/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data));
   }, [user, authLoading]);

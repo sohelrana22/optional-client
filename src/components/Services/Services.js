@@ -4,7 +4,7 @@ import Service from './../Service/Service';
 function Services() {
     const [homes, setHomes] = useState([]);
     useEffect( ()=> {
-        fetch("http://localhost:5000/home_item")
+        fetch("https://fathomless-ocean-60780.herokuapp.com/home_item")
         .then(res => res.json())
         .then((data) => setHomes(data))
     }, [])
